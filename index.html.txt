@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambio de fondo aleatorio</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Haz clic para cambiar el color de fondo</h1>
+  <button onclick="cambiarColor()">Cambiar color</button>
+
+  <script>
+    function cambiarColor() {
+      const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0E68C', '#DA70D6', '#40E0D0', '#FFD700'];
+      const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+      document.body.style.backgroundColor = colorAleatorio;
+    }
+  </script>
+</body>
+</html>
